@@ -39,22 +39,9 @@
     XCUIApplication *app = [[XCUIApplication alloc] init];
     [app.buttons[@"Set Label text to \"hello\""] tap];
     
-    
-    XCUIElementQuery *setLabelTextToHelloElementsQuery = [[[XCUIApplication alloc] init].otherElements containingType:XCUIElementTypeButton identifier:@"Set Label text to \"hello\""];
-    XCUIElement *textField = [setLabelTextToHelloElementsQuery childrenMatchingType:XCUIElementTypeTextField].element;
-    XCTAssertTrue([(NSString *)textField.value isEqualToString:@"hello"]);
-}
-
--(void)testWorl
-{
-    
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    [app.buttons[@"Set Label text to \"World\""] tap];
-    
-    XCUIElement *textField = [[app.otherElements containingType:XCUIElementTypeButton identifier:@"Set Label text to \"hello\""] childrenMatchingType:XCUIElementTypeTextField].element;
-    
-    XCTAssertTrue([(NSString *)textField.value isEqualToString:@"World"]);
-    
+    XCUIElement *textField = app.textFields[@"input"];
+    NSString *value = (NSString *)textField.value;
+    XCTAssertEqualObjects(value, @"hello");
 }
 
 @end
