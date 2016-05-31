@@ -37,13 +37,15 @@
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     
     XCUIApplication *app = [[XCUIApplication alloc] init];
-    XCUIElement *textField = [[app.otherElements containingType:XCUIElementTypeButton identifier:@"Set Label text to \"hello\""] childrenMatchingType:XCUIElementTypeTextField].element;
     [app.buttons[@"Set Label text to \"hello\""] tap];
     
-       XCTAssertTrue([(NSString *)textField.value isEqualToString:@"hello"]);
+    
+    XCUIElementQuery *setLabelTextToHelloElementsQuery = [[[XCUIApplication alloc] init].otherElements containingType:XCUIElementTypeButton identifier:@"Set Label text to \"hello\""];
+    XCUIElement *textField = [setLabelTextToHelloElementsQuery childrenMatchingType:XCUIElementTypeTextField].element;
+    XCTAssertTrue([(NSString *)textField.value isEqualToString:@"hello"]);
 }
 
--(void)testWorldFail
+-(void)testWorl
 {
     
     XCUIApplication *app = [[XCUIApplication alloc] init];
@@ -51,7 +53,7 @@
     
     XCUIElement *textField = [[app.otherElements containingType:XCUIElementTypeButton identifier:@"Set Label text to \"hello\""] childrenMatchingType:XCUIElementTypeTextField].element;
     
-    XCTAssertTrue([(NSString *)textField.value isEqualToString:@"blabla"]);
+    XCTAssertTrue([(NSString *)textField.value isEqualToString:@"World"]);
     
 }
 
