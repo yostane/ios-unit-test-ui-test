@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F275E2651C352F890090B3F7"
-               BuildableName = "test_jenkinsUITests.xctest"
-               BlueprintName = "test_jenkinsUITests"
+               BlueprintIdentifier = "F275E25A1C352F880090B3F7"
+               BuildableName = "test_jenkinsTests.xctest"
+               BlueprintName = "test_jenkinsTests"
                ReferencedContainer = "container:test_jenkins.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F275E25A1C352F880090B3F7"
-               BuildableName = "test_jenkinsTests.xctest"
-               BlueprintName = "test_jenkinsTests"
+               BlueprintIdentifier = "F275E2651C352F890090B3F7"
+               BuildableName = "test_jenkinsUITests.xctest"
+               BlueprintName = "test_jenkinsUITests"
                ReferencedContainer = "container:test_jenkins.xcodeproj">
             </BuildableReference>
          </TestableReference>
