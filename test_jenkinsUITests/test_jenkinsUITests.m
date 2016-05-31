@@ -45,7 +45,7 @@
     
     [app.buttons[@"helloButton"] tap];
     
-    [self waitForExpectationsWithTimeout:2 handler:nil];
+    [self waitForExpectationsWithTimeout:5 handler:nil];
 }
 
 @end
