@@ -37,11 +37,15 @@
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     
     XCUIApplication *app = [[XCUIApplication alloc] init];
-    [app.buttons[@"Set Label text to \"hello\""] tap];
-    
     XCUIElement *textField = app.textFields[@"input"];
-    NSString *value = (NSString *)textField.value;
-    XCTAssertEqualObjects(value, @"hello");
+
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"value = %@", @"hello"];
+    
+    [self expectationForPredicate:predicate evaluatedWithObject:textField handler:nil];
+    
+    [app.buttons[@"helloButton"] tap];
+    
+    [self waitForExpectationsWithTimeout:2 handler:nil];
 }
 
 @end

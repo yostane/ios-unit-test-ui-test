@@ -26,6 +26,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYD-19-hWT">
                                 <rect key="frame" x="219" y="74" width="162" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="helloButton"/>
                                 <state key="normal" title="Set Label text to &quot;hello&quot;"/>
                                 <connections>
                                     <action selector="onHelloClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zdP-Ch-5yq"/>
