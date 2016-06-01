@@ -45,6 +45,12 @@
     
     [app.buttons[@"helloButton"] tap];
     
+    XCUIElement *hellobuttonButton = [[XCUIApplication alloc] init].buttons[@"helloButton"];
+    [hellobuttonButton tap];
+    [hellobuttonButton tap];
+    [hellobuttonButton tap];
+    
+    
     [self waitForExpectationsWithTimeout:10 handler:nil];
 }
 
